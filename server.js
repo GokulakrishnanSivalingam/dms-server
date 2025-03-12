@@ -24,7 +24,7 @@ app.use((err, req, res, next) => {
 app.get("/api/news", async (req, res) => {
   try {
       const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=(natural disaster OR earthquake OR flood OR hurricane OR tsunami OR wildfire OR emergency)&language=en&sortBy=relevancy&pageSize=6&apiKey=79316c41264f41deaf480bbc126e3254`
+          `https://newsapi.org/v2/everything?q=(india OR natural disaster in india OR earthquake in india OR flood OR hurricane OR tsunami OR wildfire OR emergency)&language=en&sortBy=relevancy&pageSize=6&apiKey=79316c41264f41deaf480bbc126e3254`
       );
       res.json(response.data);
   } catch (error) {

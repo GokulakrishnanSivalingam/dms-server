@@ -40,18 +40,22 @@ exports.sendAlert = async (req, res) => {
     // Format message with header and footer
     const formatMessage = (userName) => {
       return `🚨 *EMERGENCY ALERT* 🚨\n\n` +
-        `Dear ${userName},\n\n` +
+        `Dear ${userName},\n` +
         `${message}\n\n` +
         `🔸 Important Instructions:\n` +
-        `1. Stay calm and follow official guidelines\n` +
-        `2. Keep this number saved for updates\n` +
-        `3. Share this information with others\n\n` +
+        `2/5/2025 12:00 PM  kajal cyclone will cross the coast of chennai.\n` +
+        `1. Stay home donot go out.\n` +
+        `2. keep your electronics item safe \n` +
+        `3. buy food and water .\n` +
+        `4. Share this information with others\n\n` +
+        
         `For immediate assistance:\n` +
         `📞 Emergency: 112\n` +
         `🚑 Ambulance: 108\n` +
         `🚒 Fire: 101\n\n` +
         `Stay safe!\n` +
-        `- Disaster Management Team`;
+        `visit:www.crisiz.online\n` +
+        `- Crisiz Team`;
     };
 
     // Format phone number for WhatsApp
