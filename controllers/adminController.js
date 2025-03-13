@@ -43,7 +43,7 @@ exports.sendAlert = async (req, res) => {
         `Dear ${userName},\n` +
         `${message}\n\n` +
         `🔸 Important Instructions:\n` +
-        `2/5/2025 12:00 PM  kajal cyclone will cross the coast of chennai.\n` +
+        `2/5/2025 12:00 PM  new cyclone will cross the coast of chennai.\n` +
         `1. Stay home donot go out.\n` +
         `2. keep your electronics item safe \n` +
         `3. buy food and water .\n` +
@@ -54,24 +54,19 @@ exports.sendAlert = async (req, res) => {
         `🚑 Ambulance: 108\n` +
         `🚒 Fire: 101\n\n` +
         `Stay safe!\n` +
-        `visit:www.crisiz.online\n` +
-        `- Crisiz Team`;
+        `visit:  www.crisiz.online\n` +
+        `            - Crisiz Team`;
     };
 
-    // Format phone number for WhatsApp
     const formatPhoneNumber = (phone) => {
-      // Remove any non-digit characters
       const cleanNumber = phone.replace(/\D/g, '');
       
-      // Remove leading '+' or '91' if present
       const numberWithoutPrefix = cleanNumber.replace(/^(\+?91)/, '');
       
-      // Ensure the number is 10 digits
       if (numberWithoutPrefix.length !== 10) {
         throw new Error('Invalid phone number length');
       }
       
-      // Return number with country code
       return `91${numberWithoutPrefix}`;
     };
 
@@ -89,7 +84,7 @@ exports.sendAlert = async (req, res) => {
           const formattedPhoneNumber = formatPhoneNumber(user.phone);
           const formattedMessage = formatMessage(user.name);
           
-          console.log(`Sending message to: ${formattedPhoneNumber}`); // Debug log
+          console.log(`Sending message to: ${formattedPhoneNumber}`);
 
           const response = await axios.post(API_URL, 
             {
@@ -106,7 +101,7 @@ exports.sendAlert = async (req, res) => {
             }
           );
 
-          console.log('API Response:', response.data); // Debug log
+          console.log('API Response:', response.data);
 
           if (response.data.status === 'success') {
             successCount++;
