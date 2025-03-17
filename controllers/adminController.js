@@ -53,7 +53,7 @@ exports.sendAlert = async (req, res) => {
         `🚑 **Ambulance:** 108\n` +
         `🚒 **Fire & Rescue:** 101\n\n` +
         
-        `For real-time updates and assistance, visit: http://www.crisiz.online \n\n` +
+        `For real-time updates and assistance, visit: www.crisiz.online \n\n` +
         `*Stay Safe. Stay Prepared.*\n` +
         `- *Crisiz Team*`;
     };
