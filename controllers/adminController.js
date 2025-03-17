@@ -42,20 +42,20 @@ exports.sendAlert = async (req, res) => {
       return `🚨 *EMERGENCY ALERT* 🚨\n\n` +
         `Dear ${userName},\n` +
         `${message}\n\n` +
-        `🔸 Important Instructions:\n` +
-        `2/5/2025 12:00 PM  new cyclone will cross the coast of chennai.\n` +
-        `1. Stay home donot go out.\n` +
-        `2. keep your electronics item safe \n` +
-        `3. buy food and water .\n` +
-        `4. Share this information with others\n\n` +
+        `✅ *Safety Guidelines:*\n` +
+        `1️⃣ **Stay Indoors** – Avoid going outside unless absolutely necessary.\n` +
+        `2️⃣ **Protect Electronics** – Keep devices charged and store them safely to prevent damage.\n` +
+        `3️⃣ **Stock Essentials** – Ensure you have sufficient food, water, and emergency supplies.\n` +
+        `4️⃣ **Spread Awareness** – Inform friends, family, and neighbors about the situation.\n\n` +
         
-        `For immediate assistance:\n` +
-        `📞 Emergency: 112\n` +
-        `🚑 Ambulance: 108\n` +
-        `🚒 Fire: 101\n\n` +
-        `Stay safe!\n` +
-        `visit:  www.crisiz.online\n` +
-        `            - Crisiz Team`;
+        `📞 *Emergency Contact Numbers:*\n` +
+        `📌 **General Emergency:** 112\n` +
+        `🚑 **Ambulance:** 108\n` +
+        `🚒 **Fire & Rescue:** 101\n\n` +
+        
+        `For real-time updates and assistance, visit: **[www.crisiz.online](http://www.crisiz.online)**\n\n` +
+        `*Stay Safe. Stay Prepared.*\n` +
+        `- *Crisiz Team*`;
     };
 
     const formatPhoneNumber = (phone) => {
